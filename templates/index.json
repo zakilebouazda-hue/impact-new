@@ -1,0 +1,581 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/header1.png",
+            "mobile_image": "shopify://shop_images/header1.png",
+            "content_max_width": 760,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "subheading": "",
+            "title": "Skincare coreen professionnel",
+            "heading_tag": "h3",
+            "button_text": "Decouvrir la gamme",
+            "button_link": "shopify://collections/all",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 35,
+            "background": "",
+            "background_gradient": ""
+          }
+        },
+        "slide_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/header2.png",
+            "content_max_width": 640,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center-start sm:text-start",
+            "subheading": "Cyano Pink Spicule Line",
+            "title": "10 000 micro-aiguilles naturelles pour une peau transformee",
+            "heading_tag": "h2",
+            "button_text": "Voir le set",
+            "button_link": "shopify://collections/all",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "background": "",
+            "background_gradient": ""
+          }
+        },
+        "slide_3": {
+          "type": "image",
+          "settings": {
+            "content_max_width": 640,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center-end sm:text-end",
+            "subheading": "Economisez jusqu'a -70%",
+            "title": "Nos sets et bundles au meilleur prix",
+            "heading_tag": "h2",
+            "button_text": "Voir les offres",
+            "button_link": "shopify://collections/all",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "background": "",
+            "background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1",
+        "slide_2",
+        "slide_3"
+      ],
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": true,
+        "show_initial_transition": false,
+        "image_size": "fill",
+        "controls_type": "dots",
+        "transition_type": "fade_with_text",
+        "autoplay": true,
+        "cycle_speed": 6,
+        "background": "#f2f2f2",
+        "background_gradient": ""
+      }
+    },
+    "best_sellers": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "",
+        "products": [],
+        "full_width": true,
+        "stack_products": false,
+        "show_progress_bar": true,
+        "products_count": 12,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "subheading": "LES PLUS VENDUS",
+        "title": "Best Sellers",
+        "content": "",
+        "link_url": "",
+        "link_text": "Voir tout",
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "#232323",
+        "heading_color": "#000000",
+        "heading_gradient": "",
+        "product_card_background": "#ffffff",
+        "product_card_text_color": "#232323"
+      }
+    },
+    "new_arrivals": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "",
+        "products": [],
+        "full_width": true,
+        "stack_products": false,
+        "show_progress_bar": true,
+        "products_count": 8,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "subheading": "NOUVEAUTES",
+        "title": "New In",
+        "content": "",
+        "link_url": "",
+        "link_text": "Voir tout",
+        "background": "#f7f7f7",
+        "background_gradient": "",
+        "text_color": "#232323",
+        "heading_color": "#000000",
+        "heading_gradient": "",
+        "product_card_background": "#ffffff",
+        "product_card_text_color": "#232323"
+      }
+    },
+    "skin_concerns": {
+      "type": "collection-list",
+      "blocks": {
+        "concern_1": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "subheading": "",
+            "title": "Anti-Age",
+            "url": "",
+            "heading_tag": "h3",
+            "text_position": "place-self-end-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "concern_2": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "subheading": "",
+            "title": "Taches / Eclat",
+            "url": "",
+            "heading_tag": "h3",
+            "text_position": "place-self-end-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "concern_3": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "subheading": "",
+            "title": "Contour des yeux",
+            "url": "",
+            "heading_tag": "h3",
+            "text_position": "place-self-end-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "concern_4": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "subheading": "",
+            "title": "Rides du cou",
+            "url": "",
+            "heading_tag": "h3",
+            "text_position": "place-self-end-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "concern_5": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "subheading": "",
+            "title": "Acne",
+            "url": "",
+            "heading_tag": "h3",
+            "text_position": "place-self-end-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "concern_1",
+        "concern_2",
+        "concern_3",
+        "concern_4",
+        "concern_5"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_collections": false,
+        "collections_per_row_mobile": "2",
+        "collections_per_row": 5,
+        "show_progress_bar": false,
+        "subheading": "PAR PROBLEME DE PEAU",
+        "title": "Trouvez votre solution",
+        "content": "",
+        "link_url": "",
+        "link_text": "Toutes les collections",
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "#232323",
+        "heading_color": "#000000",
+        "heading_gradient": ""
+      }
+    },
+    "save_with_sets": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "",
+        "products": [],
+        "full_width": true,
+        "stack_products": false,
+        "show_progress_bar": true,
+        "products_count": 8,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "subheading": "ECONOMISEZ PLUS",
+        "title": "Nos Sets et Bundles",
+        "content": "",
+        "link_url": "",
+        "link_text": "Voir tous les sets",
+        "background": "#f7f7f7",
+        "background_gradient": "",
+        "text_color": "#232323",
+        "heading_color": "#000000",
+        "heading_gradient": "",
+        "product_card_background": "#ffffff",
+        "product_card_text_color": "#232323"
+      }
+    },
+    "product_lines": {
+      "type": "image-link-blocks",
+      "blocks": {
+        "line_1": {
+          "type": "item",
+          "settings": {
+            "stretch_image": true,
+            "link_text": "Cyano Pink Spicule",
+            "link_url": "",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 25
+          }
+        },
+        "line_2": {
+          "type": "item",
+          "settings": {
+            "stretch_image": true,
+            "link_text": "Cemenrete Line",
+            "link_url": "",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 25
+          }
+        },
+        "line_3": {
+          "type": "item",
+          "settings": {
+            "stretch_image": true,
+            "link_text": "Peel Shot Line",
+            "link_url": "",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 25
+          }
+        },
+        "line_4": {
+          "type": "item",
+          "settings": {
+            "stretch_image": true,
+            "link_text": "Eyephalt Line",
+            "link_url": "",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 25
+          }
+        }
+      },
+      "block_order": [
+        "line_1",
+        "line_2",
+        "line_3",
+        "line_4"
+      ],
+      "settings": {
+        "full_width": true,
+        "block_size": "medium",
+        "subheading": "NOS GAMMES",
+        "title": "Decouvrez nos lignes de produits",
+        "content": "",
+        "link_url": "",
+        "link_text": "",
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "#232323",
+        "heading_color": "#000000",
+        "heading_gradient": ""
+      }
+    },
+    "trust_badges": {
+      "type": "text-with-icons",
+      "blocks": {
+        "badge_1": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-lock",
+            "mobile_icon_width": 24,
+            "icon_width": 32,
+            "icon_background_type": "circle",
+            "icon_background": "",
+            "icon_color": "",
+            "title": "Paiement securise",
+            "content": "<p>CB, Apple Pay, Google Pay, PayPal</p>"
+          }
+        },
+        "badge_2": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-fast-delivery",
+            "mobile_icon_width": 24,
+            "icon_width": 32,
+            "icon_background_type": "circle",
+            "icon_background": "",
+            "icon_color": "",
+            "title": "Livraison offerte",
+            "content": "<p>Sur toutes les commandes</p>"
+          }
+        },
+        "badge_3": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-return",
+            "mobile_icon_width": 24,
+            "icon_width": 32,
+            "icon_background_type": "circle",
+            "icon_background": "",
+            "icon_color": "",
+            "title": "Satisfait ou rembourse",
+            "content": "<p>Garantie 30 jours</p>"
+          }
+        },
+        "badge_4": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-customer-support",
+            "mobile_icon_width": 24,
+            "icon_width": 32,
+            "icon_background_type": "circle",
+            "icon_background": "",
+            "icon_color": "",
+            "title": "Service client 7j/7",
+            "content": "<p>Reponse sous 24h</p>"
+          }
+        }
+      },
+      "block_order": [
+        "badge_1",
+        "badge_2",
+        "badge_3",
+        "badge_4"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "title": "",
+        "heading_tag": "h5",
+        "text_alignment": "center",
+        "icon_spacing": "small",
+        "background": "#000000",
+        "background_gradient": "",
+        "text_color": "#ffffff"
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "review_1": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "Marie L.",
+            "title": "Peau transformee",
+            "content": "<p>Le set Cyano Pink Spicule a completement change ma peau en 2 semaines. Les pores sont resserres, le teint est unifie. Je recommande a 100%.</p>"
+          }
+        },
+        "review_2": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "Sarah M.",
+            "title": "Effet glass skin incroyable",
+            "content": "<p>L'effet glass skin est reel ! Apres 10 jours d'utilisation du serum + creme, ma peau brille de sante. Mon dermatologue m'a demande ce que j'utilisais.</p>"
+          }
+        },
+        "review_3": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "Ines B.",
+            "title": "Meilleur investissement skincare",
+            "content": "<p>J'ai essaye le Rice Peel Glow et le Cactox Balm. Les deux sont exceptionnels. La qualite des produits Dr.Melaxin est vraiment au-dessus de tout ce que j'ai teste.</p>"
+          }
+        },
+        "review_4": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "Camille D.",
+            "title": "Livraison rapide et produits top",
+            "content": "<p>Commande recue en 3 jours. L'Eyephalt Cream a reduit mes cernes en une semaine. Je suis cliente fidele maintenant.</p>"
+          }
+        },
+        "review_5": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "Julie R.",
+            "title": "Adieu les taches",
+            "content": "<p>Le Peel Shot + Rice Toner ont fait disparaitre mes taches pigmentaires en 3 semaines. Resultat bluffant, je regrette de ne pas avoir commence plus tot.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "review_1",
+        "review_2",
+        "review_3",
+        "review_4",
+        "review_5"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_testimonials": false,
+        "subheading": "AVIS VERIFIES",
+        "title": "Ce que nos clientes en pensent",
+        "content": "<p>Note moyenne 4.9 sur 5 — Plus de 2 000 clients satisfaits</p>",
+        "link_url": "",
+        "link_text": "",
+        "background": "#f7f7f7",
+        "background_gradient": "",
+        "text_color": "#232323",
+        "heading_color": "#000000",
+        "heading_gradient": "",
+        "testimonial_card_background": "#ffffff",
+        "testimonial_card_text_color": "#232323"
+      }
+    },
+    "about_brand": {
+      "type": "rich-text",
+      "blocks": {
+        "about_subheading": {
+          "type": "subheading",
+          "settings": {
+            "text": "A PROPOS"
+          }
+        },
+        "about_heading": {
+          "type": "heading",
+          "settings": {
+            "text": "Dr.Melaxin, la science coreenne au service de votre peau",
+            "heading_tag": "h2",
+            "text_color": "#ffffff",
+            "gradient": ""
+          }
+        },
+        "about_text": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Dr.Melaxin est une marque de skincare coreenne inspiree par la science des vaccins. Nos formules utilisent des technologies brevetees comme les spicules naturelles et le complexe Cemenrete pour stimuler le renouvellement cellulaire en profondeur. Chaque produit est developpe en laboratoire et teste cliniquement pour offrir des resultats visibles des les premiers jours.</p>"
+          }
+        },
+        "about_button": {
+          "type": "button",
+          "settings": {
+            "style": "fill",
+            "size": "xl",
+            "text": "Decouvrir tous nos produits",
+            "url": "shopify://collections/all",
+            "background": "#ffffff",
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "about_subheading",
+        "about_heading",
+        "about_text",
+        "about_button"
+      ],
+      "settings": {
+        "full_width": true,
+        "content_width": "medium",
+        "text_position": "center",
+        "background": "#000000",
+        "background_gradient": "",
+        "text_color": "#ffffff"
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "full_width": true,
+        "show_icon": true,
+        "title": "Restez informe",
+        "content": "<p>Inscrivez-vous et recevez <strong>-10% sur votre premiere commande</strong> + nos offres exclusives et conseils skincare.</p>",
+        "button_text": "S'inscrire",
+        "subtext": "",
+        "background": "#f7f7f7",
+        "background_gradient": "",
+        "text_color": "#232323",
+        "button_background": "#000000",
+        "button_text_color": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "best_sellers",
+    "new_arrivals",
+    "skin_concerns",
+    "save_with_sets",
+    "product_lines",
+    "trust_badges",
+    "testimonials",
+    "about_brand",
+    "newsletter"
+  ]
+}

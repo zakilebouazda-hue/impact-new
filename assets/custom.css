@@ -1,0 +1,365 @@
+/* ============================================
+   CÉLYSÉ — Custom Theme Styles
+   ============================================ */
+
+/* --- GLOBAL TYPOGRAPHY --- */
+h1, h2, h3, h4 {
+  color: #232323 !important;
+}
+
+/* --- HEADER --- */
+.shopify-section--header {
+  background-color: white;
+}
+.shopify-section--header height-observer {
+  border-top: 1px solid white;
+}
+
+/* Navigation visible — multi-product store */
+.header__inline-menu,
+nav.header__link-list {
+  display: flex !important;
+}
+
+/* Hamburger visible on mobile only */
+@media only screen and (max-width: 999px) {
+  .header__inline-menu,
+  nav.header__link-list {
+    display: none !important;
+  }
+  .header__menu-button,
+  .header__icon-list > button {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+/* Product card enhancements */
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Sale badges */
+.product-card .badge {
+  background: #000000;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Collection cards */
+.collection-card {
+  transition: transform 0.3s ease;
+}
+.collection-card:hover {
+  transform: scale(1.02);
+}
+
+/* Image link blocks hover */
+.image-link-blocks__item {
+  transition: transform 0.3s ease;
+}
+.image-link-blocks__item:hover {
+  transform: scale(1.03);
+}
+
+/* Menu drawer styling */
+#header-sidebar-menu nav li a,
+#header-sidebar-menu nav li button,
+#header-sidebar-menu nav li summary,
+.navigation-drawer li a,
+.navigation-drawer li button,
+.navigation-drawer li summary {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  line-height: 1.4em !important;
+}
+.navigation-drawer .dropdown-menu__item {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+.navigation-drawer .text-with-icon svg {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+/* Header nav links */
+a.bold.link-faded-reverse {
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 15px;
+  color: black;
+}
+details.relative summary {
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 3px;
+  color: black;
+}
+
+/* --- SCROLLING TICKER --- */
+.shopify-section--scrolling-text {
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+.scrolling-text__text {
+  text-transform: uppercase;
+}
+
+/* --- HERO SECTION --- */
+.prose .subheading {
+  font-size: 45px;
+  font-weight: 600;
+}
+.prose p.h4 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 0px;
+}
+.prose .button {
+  border-radius: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+/* --- LOGO LIST "VU SUR" --- */
+.shopify-section--logo-list .logo-list {
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.shopify-section--logo-list .logo-list__item {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 1rem 1.5rem;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+.shopify-section--logo-list .logo-list__item:hover {
+  opacity: 1;
+}
+
+/* --- IMPACT STATS --- */
+.shopify-section--impact-text .impact-text__text-wrapper {
+  padding: 1.5rem 0;
+}
+
+/* --- TESTIMONIALS --- */
+.testimonial {
+  padding: 2rem !important;
+  border-radius: 12px !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.testimonial:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+.testimonial .rating__star {
+  color: #000000;
+}
+.testimonial .blockquote,
+.testimonial blockquote {
+  font-style: italic;
+  line-height: 1.7;
+}
+
+/* --- FEATURED PRODUCT --- */
+.shopify-section--featured-product .product {
+  gap: 3rem;
+}
+.shopify-section--featured-product .product-info .prose {
+  gap: 1.25rem;
+}
+
+/* Product buy button enhanced */
+.shopify-section--featured-product .button--primary,
+.shopify-section--featured-product [name="add"] {
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 16px 32px;
+  transition: all 0.3s ease;
+}
+.shopify-section--featured-product .button--primary:hover,
+.shopify-section--featured-product [name="add"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* --- TRUST BADGES --- */
+.shopify-section--text-with-icons .text-with-icons {
+  padding: 2rem 0;
+}
+.text-with-icons__text-wrapper .prose {
+  color: inherit !important;
+}
+.text-with-icons__text-wrapper .prose p {
+  color: inherit;
+}
+.text-with-icon {
+  gap: var(--spacing-3);
+  align-items: center;
+  display: flex;
+}
+
+/* --- BEFORE/AFTER --- */
+.shopify-section--before-after-image {
+  overflow: hidden;
+}
+
+/* --- HOW IT WORKS (multi-column) --- */
+.shopify-section--multi-column .multi-column__item {
+  padding: 2rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+.shopify-section--multi-column .multi-column__item:hover {
+  transform: translateY(-4px);
+}
+
+/* --- FAQ --- */
+.shopify-section--faq .accordion {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+/* --- NEWSLETTER --- */
+.shopify-section--newsletter .button {
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* --- FOOTER --- */
+.footer .footer-socials-links li a {
+  display: flex !important;
+  align-items: center !important;
+  line-height: 35px !important;
+}
+.footer-socials-links .footer__block-list {
+  gap: 13rem !important;
+}
+.footer-socials-links ul.v-stack {
+  display: grid;
+  line-height: 35px;
+}
+.footer__wrapper .footer__block-list {
+  gap: 10rem !important;
+}
+.footer__block > p {
+  font-size: 25px !important;
+}
+.v-stack p.h3 {
+  font-size: 25px !important;
+}
+
+/* --- PRODUCTS SECTION --- */
+.prose .h2 {
+  font-size: 15px !important;
+  margin-top: 0px;
+}
+
+/* Product single page */
+.section-blends .prose p.h2 {
+  font-size: 30px !important;
+  font-weight: 600;
+}
+
+/* Section stack background for specific sections */
+.section-stack__main {
+  border-radius: 10px;
+}
+
+/* --- SCROLL AREA --- */
+.scroll-area {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+}
+.product-item {
+  flex: 0 0 auto;
+  width: 200px;
+}
+
+/* --- SMOOTH ANIMATIONS --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Sections reveal animation */
+.section[data-section-id] {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* --- GLOBAL BUTTON ENHANCEMENTS --- */
+.button--primary {
+  transition: all 0.3s ease;
+}
+.button--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media only screen and (max-width: 786px) {
+  /* Default: Black icons for all pages */
+  .header .icon {
+    fill: black !important;
+    color: black !important;
+    transition: fill 0.3s ease, color 0.3s ease;
+  }
+  /* Home page: black icons (no transparent header) */
+  body.template-index .header .icon {
+    fill: black !important;
+    color: black !important;
+  }
+
+  /* Ticker sizing */
+  .shopify-section--scrolling-text {
+    font-size: 12px;
+  }
+
+  /* Testimonials mobile */
+  .testimonial {
+    padding: 1.5rem !important;
+  }
+
+  /* Trust badges stack nicely */
+  .text-with-icons__text-wrapper {
+    text-align: center;
+  }
+
+  /* Product buttons full width */
+  .shopify-section--featured-product .button--primary,
+  .shopify-section--featured-product [name="add"] {
+    width: 100%;
+  }
+
+  /* Hero text mobile */
+  .prose .subheading {
+    font-size: 28px;
+  }
+}
+
+@media only screen and (min-width: 787px) and (max-width: 999px) {
+  .prose .subheading {
+    font-size: 36px;
+  }
+}

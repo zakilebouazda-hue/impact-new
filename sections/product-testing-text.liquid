@@ -1,0 +1,31 @@
+{% schema %}
+{
+  "name": "Product Testing Text",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "testing_text_block",
+      "name": "Testing Text Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "testing_text",
+          "label": "Testing Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Default",
+      "blocks": []
+    }
+  ]
+}
+{% endschema %}
+
+{% for block in section.blocks %}
+  <div>
+    {{ block.settings.testing_text }}
+  </div>
+{% endfor %}

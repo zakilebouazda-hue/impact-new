@@ -1,0 +1,105 @@
+<style>
+  /* accordion styles */
+  #sec-main .container { margin:0px; max-width:900px; }
+  .accordion-list{list-style:none;padding:0;margin:0;width:100%;}
+  .accordion-item{display:flex;justify-content:space-between;align-items:center;padding:15px 0;font-weight:bold;cursor:pointer;border-bottom:1px solid #ddd;}
+  .accordion-item span{font-size:18px;transition:transform 0.2s ease;}
+  .accordion-item{color:#1a1a1a;font-size:18px;letter-spacing:.3px;}
+  .accordion-item:hover span{transform:translateX(2px);}
+  .slide-panel{position:fixed;top:0;right:-100%;width:50%;height:100vh;background:#fff;box-shadow:-2px 0 10px rgba(0,0,0,0.2);z-index:1051;overflow-y:auto;transition:right 0.4s ease-in-out;padding:20px;display:flex;flex-direction:column;}
+  .slide-panel.active{right:0;}
+  html.no-scroll, body.no-scroll{overflow:hidden;}
+  .close-btn{font-size:24px;cursor:pointer;border:none;background:transparent;}
+  .overlay{position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:1050;opacity:0;visibility:hidden;transition:opacity 0.3s ease;}
+  .overlay.active{opacity:1;visibility:visible;}
+  .slide-header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ddd;padding-bottom:10px;margin-bottom:15px;position:sticky;top:0;background:#fff;z-index:1;}
+  .slide-header h4{text-transform:uppercase;font-weight:bold;font-size:24px;}
+  #panelContent{margin-top:20px;line-height:1.6;}
+</style>
+
+<section id="sec-main">
+  <div class="container">
+    <ul class="accordion-list">
+      {% for block in section.blocks %}
+        <li class="accordion-item open-panel" 
+            data-title="{{ block.settings.question }}" 
+            data-content="{{ block.settings.answer }}">
+          {{ block.settings.question }} <span>+</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<div id="overlay" class="overlay"></div>
+<div id="slidePanel" class="slide-panel">
+  <div class="slide-header">
+    <h4 id="panelTitle" class="mb-0"></h4>
+    <button class="close-btn" id="closePanel">&times;</button>
+  </div>
+  <p id="panelContent"></p>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const openButtons = document.querySelectorAll('.open-panel');
+    const slidePanel = document.getElementById('slidePanel');
+    const panelTitle = document.getElementById('panelTitle');
+    const panelContent = document.getElementById('panelContent');
+    const closePanel = document.getElementById('closePanel');
+    const overlay = document.getElementById('overlay');
+
+    function openSlidePanel(button){
+      panelTitle.textContent = button.getAttribute('data-title');
+      panelContent.innerHTML = button.getAttribute('data-content');
+      slidePanel.classList.add('active');
+      overlay.classList.add('active');
+      document.documentElement.classList.add('no-scroll');
+    }
+
+    function closeSlidePanel(){
+      slidePanel.classList.remove('active');
+      overlay.classList.remove('active');
+      document.documentElement.classList.remove('no-scroll');
+    }
+
+    openButtons.forEach(btn => btn.addEventListener('click', () => openSlidePanel(btn)));
+    closePanel.addEventListener('click', closeSlidePanel);
+    overlay.addEventListener('click', closeSlidePanel);
+  });
+</script>
+
+{% schema %}
+{
+  "name": "FAQ Accordion",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "FAQ item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ Accordion",
+      "blocks": [
+        {
+          "type": "faq"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

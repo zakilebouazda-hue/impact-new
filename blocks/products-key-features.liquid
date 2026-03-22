@@ -1,0 +1,162 @@
+{% comment %}
+  Product Slide Panel Section
+  Works for mobile/tablet only (desktop unaffected)
+{% endcomment %}
+
+<div class="custom-slide-panel-wrapper">
+  <button 
+    class="open-panel" 
+    data-title="{{ section.settings.panel_title }}" 
+    data-content="{{ section.settings.panel_content }}">
+    {{ section.settings.button_label }}
+  </button>
+
+  <div id="overlay"></div>
+
+  <div id="slidePanel">
+    <div class="panel-header">
+      <h2 id="panelTitle"></h2>
+      <button id="closePanel">✕</button>
+    </div>
+    <div id="panelContent" class="panel-body"></div>
+  </div>
+</div>
+
+<style>
+/* Panel hidden by default */
+#slidePanel {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100%;
+  width: 400px;
+  max-width: 100%;
+  background: #fff;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  transition: right 0.4s ease-in-out;
+  z-index: 9999;
+  overflow-y: auto;
+}
+
+#slidePanel.full-width {
+  width: 100%;
+}
+
+#slidePanel.active {
+  right: 0;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+}
+
+.panel-body {
+  padding: 15px;
+}
+
+#overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 9998;
+  display: none;
+}
+
+#overlay.active {
+  display: block;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 320px) {
+  /* Mobile/tablet only */
+  .custom-slide-panel-wrapper .open-panel {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const openButtons = document.querySelectorAll('.open-panel');
+  const slidePanel = document.getElementById('slidePanel');
+  const panelTitle = document.getElementById('panelTitle');
+  const panelContent = document.getElementById('panelContent');
+  const closePanel = document.getElementById('closePanel');
+  const overlay = document.getElementById('overlay');
+
+  // Hide on load
+  slidePanel.classList.remove('active', 'full-width');
+  overlay.classList.remove('active');
+
+  openButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      panelTitle.textContent = button.getAttribute('data-title');
+      panelContent.innerHTML = button.getAttribute('data-content');
+
+      if (window.innerWidth <= 1024) {
+        slidePanel.classList.add('full-width');
+      } else {
+        slidePanel.classList.remove('full-width');
+      }
+
+      slidePanel.classList.add('active');
+      overlay.classList.add('active');
+
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeSlidePanel() {
+    slidePanel.classList.remove('active', 'full-width');
+    overlay.classList.remove('active');
+    document.documentElement.style.overflow = '';
+    document.body.style.overflow = '';
+  }
+
+  closePanel.addEventListener('click', closeSlidePanel);
+  overlay.addEventListener('click', closeSlidePanel);
+});
+</script>
+
+{% schema %}
+{
+  "name": "Product Slide Panel",
+  "settings": [
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "View Details"
+    },
+    {
+      "type": "text",
+      "id": "panel_title",
+      "label": "Panel Title",
+      "default": "More Information"
+    },
+    {
+      "type": "textarea",
+      "id": "panel_content",
+      "label": "Panel Content",
+      "default": "<p>This is the panel content.</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Slide Panel",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}

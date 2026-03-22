@@ -1,0 +1,102 @@
+{% comment %}
+  Product Key Features — dynamic version of your green boxes
+  Works on product templates. Manage items as section blocks.
+{% endcomment %}
+
+<section id="section-{{ section.id }}" class="key-features-wrap">
+  {% if section.settings.heading != blank %}
+    <h2 class="key-feature-h2"><strong>{{ section.settings.heading }}</strong></h2>
+  {% endif %}
+
+  <div class="icon-boxes icon-boxes--cols-{{ section.settings.desktop_cols }}">
+    {% for block in section.blocks %}
+      {% case block.type %}
+      {% when 'feature' %}
+        <div class="icon-box" {{ block.shopify_attributes }}>
+          {% if block.settings.icon != blank %}
+            {{ block.settings.icon | image_url: width: 120 | image_tag: alt: block.settings.alt, widths: '60,90,120' }}
+          {% endif %}
+          <div class="box-text">{{ block.settings.text }}</div>
+        </div>
+      {% endcase %}
+    {% endfor %}
+  </div>
+
+  <style>
+    /* Scoped styles so they don't leak into Impulse globally */
+    #section-{{ section.id }} .icon-boxes {
+      display: grid;
+      grid-template-columns: repeat({{ section.settings.desktop_cols }}, 1fr);
+      gap: 1rem;
+      max-width: {{ section.settings.max_width }};
+      margin: auto;
+      margin-left: 0;
+    }
+    #section-{{ section.id }} .icon-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 30px 20px;
+      background: {{ section.settings.card_bg }};
+      border-radius: {{ section.settings.radius }};
+      width: 95%;
+      box-shadow: {% if section.settings.shadow %}0 2px 10px rgba(0,0,0,.06){% else %}none{% endif %};
+    }
+    #section-{{ section.id }} .icon-box img {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    #section-{{ section.id }} .box-text {
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+    #section-{{ section.id }} .key-feature-h2 {
+      font-size: 25px;
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 990px) {
+      #section-{{ section.id }} .icon-boxes { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width: 600px) {
+      #section-{{ section.id }} .icon-boxes { grid-template-columns: 1fr; }
+    }
+  </style>
+</section>
+
+{% schema %}
+{
+  "name": "Product key features",
+  "templates": ["product"],
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Key Features:" },
+    { "type": "select", "id": "desktop_cols", "label": "Columns (desktop)", "default": "2",
+      "options": [
+        { "value": "2", "label": "2" },
+        { "value": "3", "label": "3" },
+        { "value": "4", "label": "4" }
+      ]
+    },
+    { "type": "text", "id": "max_width", "label": "Max width (e.g. 700px or 100%)", "default": "700px" },
+    { "type": "color", "id": "card_bg", "label": "Card background", "default": "#d4e2d4" },
+    { "type": "range", "id": "radius", "label": "Card corner radius", "min": 0, "max": 24, "step": 1, "unit": "px", "default": 5 },
+    { "type": "checkbox", "id": "shadow", "label": "Subtle shadow", "default": false }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        { "type": "image_picker", "id": "icon", "label": "Icon (PNG/JPG/SVG)" },
+        { "type": "text", "id": "alt", "label": "Icon alt text" },
+        { "type": "text", "id": "text", "label": "Feature text", "default": "Your feature text" }
+      ]
+    }
+  ],
+  "presets": [
+    { "name": "Product key features" }
+  ]
+}
+{% endschema %}

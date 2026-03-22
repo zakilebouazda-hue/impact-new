@@ -1,0 +1,48 @@
+{% schema %}
+{
+  "name": "Custom Accordion",
+  "tag": "section",
+  "class": "custom-accordion-section",
+  "blocks": [
+    {
+      "type": "accordion_item",
+      "name": "Accordion Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "accordion_title",
+          "label": "Accordion Title"
+        },
+        {
+          "type": "richtext",
+          "id": "accordion_content",
+          "label": "Accordion Content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Accordion",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="accordion" id="accordionExample">
+  {% for block in section.blocks %}
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="heading{{ forloop.index }}">
+        <button class="accordion-button {% unless forloop.first %}collapsed{% endunless %}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ forloop.index }}" aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="collapse{{ forloop.index }}">
+          {{ block.settings.accordion_title }}
+        </button>
+      </h2>
+      <div id="collapse{{ forloop.index }}" class="accordion-collapse collapse {% if forloop.first %}show{% endif %}" aria-labelledby="heading{{ forloop.index }}" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          {{ block.settings.accordion_content }}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
