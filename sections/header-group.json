@@ -14,16 +14,16 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "message": {
+        "message_W98gMr": {
           "type": "message",
           "settings": {
-            "text": "LIVRAISON OFFERTE SUR TOUTES LES COMMANDES",
+            "text": "dddddd",
             "url": ""
           }
         }
       },
       "block_order": [
-        "message"
+        "message_W98gMr"
       ],
       "settings": {
         "enable_sticky": false,
