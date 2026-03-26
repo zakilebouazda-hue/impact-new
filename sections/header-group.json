@@ -20,34 +20,10 @@
             "text": "LIVRAISON OFFERTE SUR TOUTES LES COMMANDES",
             "url": ""
           }
-        },
-        "message_2": {
-          "type": "message",
-          "settings": {
-            "text": "REVENDEUR OFFICIEL DR.MELAXIN EN EUROPE",
-            "url": ""
-          }
-        },
-        "message_3": {
-          "type": "message",
-          "settings": {
-            "text": "SATISFAIT OU REMBOURSE 30 JOURS",
-            "url": ""
-          }
-        },
-        "message_4": {
-          "type": "message",
-          "settings": {
-            "text": "JUSQU'A -70% SUR NOS SETS",
-            "url": ""
-          }
         }
       },
       "block_order": [
-        "message",
-        "message_2",
-        "message_3",
-        "message_4"
+        "message"
       ],
       "settings": {
         "enable_sticky": false,
@@ -55,7 +31,7 @@
         "autoplay": true,
         "cycle_speed": 5,
         "scrolling_speed": 10,
-        "text_size": "text-xs",
+        "text_size": "text-lg",
         "background": "#000000",
         "background_gradient": "",
         "text_color": "#ffffff"
